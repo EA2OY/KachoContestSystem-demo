@@ -3607,9 +3607,20 @@
     fitStage();
     wsConnect();
     // DEMO (tras wsConnect, que es quien activa localDemo): estado inicial del
-    // proyecto (cfg) si el visitante no tiene nada guardado — así el simulador
-    // arranca con los nombres/puntos reales
-    if (localDemo && !localStorage.getItem(LS_CFG)) {
+    // proyecto (cfg) si el visitante no tiene nada guardado O si lo guardado
+    // sigue siendo el cfg por defecto (nadie lo ha editado) — así el simulador
+    // arranca con los nombres/puntos reales sin pisar ediciones del visitante
+    const storedCfg = localStorage.getItem(LS_CFG);
+    let cfgUntouched = !storedCfg;
+    if (storedCfg) {
+      try {
+        const d = JSON.parse(storedCfg);
+        const def = DEFAULT_CFG.players || [];
+        const pl = d.players || [];
+        cfgUntouched = pl.length === def.length && pl.every((p, i) => p.name === def[i].name);
+      } catch (e) { cfgUntouched = true; }
+    }
+    if (localDemo && cfgUntouched) {
       fetch('js/demo_cfg.json')
         .then((r) => r.ok ? r.json() : Promise.reject(r.status))
         .then((j) => {
