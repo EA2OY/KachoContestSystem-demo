@@ -28,12 +28,19 @@ sin servidor y sin hardware. Dos pestañas se hablan entre sí y el concurso cob
 | Paso | Qué hacer |
 |---|---|
 | 1️⃣ | Abre el enlace de arriba |
-| 2️⃣ | Escribe el PIN **`134679`** y elige destino |
-| 3️⃣ | Abre **DOS pestañas del mismo navegador**: una como **Panel del super** (*Ajustes*) y otra como **Pantalla de proyección** |
+| 2️⃣ | En esa pestaña pon el PIN **`134679`** y elige **Panel del super** |
+| 3️⃣ | Abre **otra pestaña nueva** (en el **mismo navegador**) con el mismo enlace y elige **Pantalla de proyección** |
 | 4️⃣ | ¡A jugar! Lanza preguntas, pulsa con los botones **Puls**, juzga con **Verdad/Falso**, prueba rebotes, modos **Puntos/Vidas**, el editor de layout y los sonidos |
 
+> 🖥️🖥️ **Se recomienda abrir DOS PESTAÑAS NUEVAS en el MISMO navegador** — una como
+> **Panel del super** (*Ajustes*) y otra como **Pantalla de proyección**. Así replicas el
+> **ambiente real de trabajo**: el super maneja el juego desde el panel (como en su equipo) mientras
+> el público ve la proyección en la otra ventana; las dos están **sincronizadas en vivo**.
+
 - 🕹️ **La gracia está en las dos pestañas**: son el panel del super y la pantalla del público,
-  sincronizadas en vivo (una lanza, la otra canta).
+  sincronizadas en vivo (una lanza, la otra canta). Es la forma de **replicar el ambiente real de
+  trabajo**: el super juega desde una ventana y el público ve la proyección en la otra.
+  **Ambas deben ser del mismo navegador** (la sincronía es por pestañas).
 - 🔊 **El sonido suena en la ventana de proyección** (el panel es mudo a propósito, como el real).
   El navegador pide un toque en pantalla la primera vez para desbloquear el audio.
 - 🎲 **El modo DEMO se activa solo** al servirse desde GitHub Pages (o con `?demo=1` en la URL).
