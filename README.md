@@ -1,8 +1,23 @@
-# 🎮 Kacho Contest System — DEMO (simulador)
+<div align="center">
 
-**Simulador online del sistema**, sin servidor y sin hardware: es la **web real** del proyecto
-funcionando en su *modo DEMO* (sincronización entre pestañas del mismo navegador mediante
-BroadcastChannel). Ideal para probar la interfaz y enseñarla.
+<img src="img/fondoweb.jpg" alt="Kacho Contest System — DEMO" width="720">
+
+# 🎮 Kacho Contest System — DEMO
+
+### «Atrápame el Bit» — simulador online del sistema de pulsadores
+
+*No es una maqueta ni una captura: es **la web real** del proyecto funcionando en su **modo DEMO**,
+sin servidor y sin hardware. Dos pestañas se hablan entre sí y el concurso cobra vida.* 🧠⚡
+
+<img src="img/napirojo.png" width="110"> <img src="img/napiazul.png" width="110"> <img src="img/napiverde.png" width="110"> <img src="img/napiamarillo.png" width="110">
+
+<sub>Los napis del escenario — cada jugador tiene el suyo 🎭</sub>
+
+</div>
+
+---
+
+## 🚀 Pruébalo ahora (sin instalar nada)
 
 <p align="center">
   <a href="https://ea2oy.github.io/KachoContestSystem-demo/" target="_blank" rel="noopener">
@@ -10,45 +25,92 @@ BroadcastChannel). Ideal para probar la interfaz y enseñarla.
   </a>
 </p>
 
-## 🚀 Cómo usarlo
+| Paso | Qué hacer |
+|---|---|
+| 1️⃣ | Abre el enlace de arriba |
+| 2️⃣ | Escribe el PIN **`134679`** y elige destino |
+| 3️⃣ | Abre **DOS pestañas del mismo navegador**: una como **Panel del super** (*Ajustes*) y otra como **Pantalla de proyección** |
+| 4️⃣ | ¡A jugar! Lanza preguntas, pulsa con los botones **Puls**, juzga con **Verdad/Falso**, prueba rebotes, modos **Puntos/Vidas**, el editor de layout y los sonidos |
 
-1. Abre el enlace de arriba (o el de GitHub Pages de este repo).
-2. Escribe el PIN **`134679`** y elige destino.
-3. Abre **DOS pestañas del mismo navegador**:
-   - Una con **Panel del super** (pestaña *Ajustes*).
-   - Otra con **Pantalla de proyección** (o directamente `proyector.html`).
-4. ¡Listo! Las dos pestañas se sincronizan entre sí: lanza preguntas, pulsa con los botones
-   **Puls** de cada jugador, juzga con **Verdad/Falso**, prueba rebotes, modos **Puntos/Vidas**,
-   el editor de layout, los sonidos (en la pestaña de proyección)…
+- 🕹️ **La gracia está en las dos pestañas**: son el panel del super y la pantalla del público,
+  sincronizadas en vivo (una lanza, la otra canta).
+- 🔊 **El sonido suena en la ventana de proyección** (el panel es mudo a propósito, como el real).
+  El navegador pide un toque en pantalla la primera vez para desbloquear el audio.
+- 🎲 **El modo DEMO se activa solo** al servirse desde GitHub Pages (o con `?demo=1` en la URL).
 
-> 💡 El modo DEMO se activa automáticamente en GitHub Pages (o con `?demo=1` en la URL).
-> Incluye la **batería completa** de preguntas del sistema.
+## ✨ ¿Qué trae la DEMO?
 
-## ✏️ Es un sistema editable y persistente (por navegador)
+Es el sistema completo, con la **batería real de 288 preguntas** y los ajustes de verdad
+(nombres, colores, napis y puntos del sistema original):
 
-En modo DEMO el sistema se comporta como el real y **guarda los cambios en tu navegador**
-(localStorage), así que sobreviven a las recargas:
+| | |
+|---|---|
+| 🎮 **4 jugadores** | Nombres, colores, napis, ±1 punto y botón **Puls** para simular cada pulsador |
+| ⏱️ **Segundero** | Tiempo de reacción de cada jugador desde que sale la pregunta |
+| 🔁 **Turnos y rebotes** | Rebote manual, por tiempo y encolado de pulsaciones (1º, 2º, 3º, 4º) |
+| ✅ **Verdadero / Falso** | Tú eres el juez: aciertos con aplausos y explicación, fallos con X neón |
+| ❤️ **Modo Vidas** | Quita vidas a la víctima; 0 vidas = eliminado (o modo Puntos clásico) |
+| 📝 **Batería de preguntas** | Añadir, editar, borrar, mover, filtrar, marcar usadas y **▶ Siguiente** |
+| 🔊 **Sonidos** | Chiptune + banco de pruebas (quack incluido 😜) |
+| 🎬 **Animaciones** | 13+ animaciones de rearme con textos graciosos, confeti y focos |
+| 🖼️ **Editor de layout** | Mueve, escala y ajusta cada elemento del escenario en vivo |
+| 🗒️ **Log de rondas** | Todo lo que pasa queda registrado y se ve en el panel |
 
-- **Preguntas**: añadir, editar, borrar, mover, marcar usadas (✓/↩), **▶ Siguiente**, pegar
-  texto y **subir un `.txt`** (todo persistente).
-- **Jugadores y configuración**: nombres, colores, puntos/vidas, modos, toggles…
+## 💾 Editable y persistente (en tu navegador)
+
+El modo DEMO se comporta como el sistema real y **guarda los cambios en `localStorage`**, así que
+sobreviven a las recargas:
+
+- **Preguntas**: añadir, editar, borrar, mover, marcar usadas (✓/↩), **▶ Siguiente**, pegar texto
+  y **subir un `.txt`**.
+- **Jugadores y configuración**: nombres, colores, puntos/vidas, modos y toggles.
 - **Layout**: posiciones y tamaños del escenario.
 
-Para **volver a la batería original**: borra los datos del sitio en tu navegador
-(DevTools → Application → Clear site data) o pulsa "Vaciar batería" y recarga.
+> 🔄 **Para volver a la batería original**: borra los datos del sitio (DevTools → Application →
+> Clear site data) o pulsa *Vaciar batería* y recarga.
 
-## ⚠️ Qué NO hace (es un simulador)
+## ⚠️ Qué NO hace (es un simulador, y lo dice claro)
 
-- No hay hardware: los pulsadores físicos, luces, OLED y LED RGB no existen aquí.
-- No sincroniza **entre dispositivos** distintos (solo pestañas del mismo navegador).
-- Las **subidas de MP3 e imágenes** de animación no funcionan (no hay servidor de archivos).
+| Límite | Por qué |
+|---|---|
+| ❌ Sin pulsadores físicos, luces, OLED ni LED RGB | No hay hardware: eso vive en la placa ESP32-S3 |
+| ❌ Sin sincronía **entre dispositivos** | Solo entre pestañas del **mismo** navegador (BroadcastChannel) |
+| ❌ Sin subida de MP3 ni de imágenes de animación | No hay servidor de archivos en GitHub Pages |
+| ❌ Sin WiFi propio ni botones físicos de la placa | Funciones del firmware, no de la web |
 
-## 🧩 El proyecto real
+## 🎲 Cómo se juega (en 30 segundos)
 
-Este demo es una copia de la carpeta `web/` del proyecto **Kacho Contest System** (firmware
-ESP32-S3 + web para concursos de pulsadores, Navarra LAN Party). Repositorio principal:
-privado. Manuales completos y guías de arquitectura, en ese repositorio.
+1. El super lanza una pregunta desde el panel (con animación y sonido) 🎬
+2. Los concursantes pulsan: primero en llegar, primero en responder 🎮
+3. El super juzga con **Verdad** (aplausos + explicación) o **Falso** (X) ✅❌
+4. Si nadie acierta, el rebote pasa el turno al siguiente… o se reabre la ronda 🔁
+5. ¿Modo Vidas? Cada acierto quita una vida a la víctima que elija el super ❤️💀
 
-## 📄 Licencia
+## 🧩 El proyecto real (la placa)
 
-MIT © 2026 Tai Soluciones — hecho con ❤️ por Kacho (EA2OY).
+Este repo es una **copia de la carpeta `web/`** del proyecto **Kacho Contest System**: firmware
+ESP32-S3 + web para el concurso de pulsadores de la
+[**Navarra LAN Party**](https://navarralanparty.org). En el sistema real:
+
+- 🔌 **Todo vive en un ESP32-S3** (16 MB flash · 8 MB PSRAM): la placa sirve la web, escucha los
+  4 pulsadores, canta los turnos, reparte rebotes y lanza las animaciones.
+- 📡 **WiFi propio (AP) o red del evento (STA)** — funciona con o sin router.
+- 💡 **Hardware**: pulsadores en GPIO 4-7, luces de turno en 15-18, botones de quitar pregunta /
+  rebote / rearme en 8-10, OLED I2C (41/42) y LED RGB WS2812 (48).
+- 📘 **Manuales completos** (uso del super + montaje técnico) y guías de arquitectura en el
+  repositorio principal, que es **privado**.
+
+> 🔒 El repositorio del proyecto real es privado (su memoria de desarrollo contiene credenciales de
+> pruebas). Este demo se publica aparte, solo con la web.
+
+---
+
+<div align="center">
+
+**Hecho con ❤️ y mucho café por Kacho (EA2OY) para la Navarra LAN Party**
+
+<img src="img/napiblank.png" width="70"> <img src="img/napicambios.png" width="70">
+
+*MIT License © 2026 Tai Soluciones*
+
+</div>
