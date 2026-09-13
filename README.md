@@ -4,9 +4,15 @@
 funcionando en su *modo DEMO* (sincronización entre pestañas del mismo navegador mediante
 BroadcastChannel). Ideal para probar la interfaz y enseñarla.
 
+<p align="center">
+  <a href="https://ea2oy.github.io/KachoContestSystem-demo/" target="_blank" rel="noopener">
+    <strong>👉 Abrir la DEMO online (pestaña nueva) 🎮</strong>
+  </a>
+</p>
+
 ## 🚀 Cómo usarlo
 
-1. Abre esta página (el enlace de GitHub Pages de este repo).
+1. Abre el enlace de arriba (o el de GitHub Pages de este repo).
 2. Escribe el PIN **`134679`** y elige destino.
 3. Abre **DOS pestañas del mismo navegador**:
    - Una con **Panel del super** (pestaña *Ajustes*).
