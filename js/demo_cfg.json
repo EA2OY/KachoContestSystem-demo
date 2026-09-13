@@ -1,0 +1,19 @@
+{
+  "pin": "134679",
+  "numPlayers": 4,
+  "players": [
+    { "name": "Olegario", "color": "blanco", "napi": "napiblank", "points": 1 },
+    { "name": "Hermenegildo", "color": "azul", "napi": "napiblank", "points": 0 },
+    { "name": "Botarate", "color": "verde", "napi": "napiblank", "points": 0 },
+    { "name": "Mendrugo", "color": "amarillo", "napi": "napiblank", "points": 1 }
+  ],
+  "timer": { "on": false, "secs": 10 },
+  "anim": { "on": true, "focosQ": false },
+  "sound": { "on": true },
+  "question": "",
+  "explanation": "",
+  "faceDigital": true,
+  "haloColor": true,
+  "animTags": { "focos": "¡Adelante! sigue así" },
+  "sndBust": 1
+}

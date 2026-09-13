@@ -3606,6 +3606,21 @@
     window.addEventListener('resize', () => { fitStage(); if (DEB.fitMini) DEB.fitMini(); });
     fitStage();
     wsConnect();
+    // DEMO (tras wsConnect, que es quien activa localDemo): estado inicial del
+    // proyecto (cfg) si el visitante no tiene nada guardado — así el simulador
+    // arranca con los nombres/puntos reales
+    if (localDemo && !localStorage.getItem(LS_CFG)) {
+      fetch('js/demo_cfg.json')
+        .then((r) => r.ok ? r.json() : Promise.reject(r.status))
+        .then((j) => {
+          cfg = Object.assign({}, DEFAULT_CFG, j);
+          DEB.cfg = cfg;
+          localStorage.setItem(LS_CFG, JSON.stringify(cfg));
+          renderStage();
+          renderQuestion();
+        })
+        .catch(() => { /* sin preset: se usa el cfg por defecto */ });
+    }
     tickClock();
     setInterval(tickClock, 1000);
     setInterval(updateWatchdog, 1000);
