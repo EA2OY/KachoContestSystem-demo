@@ -2428,6 +2428,12 @@
   const LS_LASTQ = 'dateelbit.lastq';
   let lastQ = '';
   try { lastQ = localStorage.getItem(LS_LASTQ) || ''; } catch (e) { lastQ = ''; }
+  // modo local/DEMO: la batería editada se guarda en el navegador (persiste recargas)
+  const LS_BATTERY = 'dateelbit.battery';
+  function saveBatteryLocal() {
+    if (batteryApi) return; // contra el ESP32 manda el servidor
+    try { localStorage.setItem(LS_BATTERY, JSON.stringify(batteryLines)); } catch (e) { /* ignore */ }
+  }
 
   // una línea de batería puede ser "pregunta / explicación": se parte por la
   // PRIMERA barra con espacios alrededor (" / ") para no romper fracciones o
@@ -2485,6 +2491,7 @@
     } else if (op === 'replace') {
       batteryLines = (payload.lines || []).map((l) => String(l).trim()).filter((l) => l.length > 0);
     }
+    saveBatteryLocal(); // modo local/DEMO: persiste en el navegador
     renderQList();
     return true;
   }
@@ -2707,6 +2714,14 @@
       })
       .catch(() => {
         batteryApi = false;
+        // modo local/DEMO: si ya se editó la batería en este navegador, se usa esa
+        let local = null;
+        try { local = JSON.parse(localStorage.getItem(LS_BATTERY) || 'null'); } catch (e) { local = null; }
+        if (Array.isArray(local)) {
+          batteryLines = local;
+          renderQList();
+          return;
+        }
         fetch('q/lista.txt')
           .then((r) => r.ok ? r.text() : Promise.reject(r.status))
           .then((txt) => {
@@ -3793,6 +3808,19 @@ $('btn-q-clearused').addEventListener('click', () => {
       const input = $('q-file');
       if (!input.files || !input.files.length) return;
       const file = input.files[0];
+      if (localDemo || !batteryApi) {
+        // modo local/DEMO: se lee el .txt y se guarda en el navegador (persistente)
+        try {
+          const txt = await file.text();
+          const lines = txt.split(/\r?\n/).map((l) => l.trim()).filter((l) => l.length > 0);
+          await qApi('replace', { lines });
+          input.value = '';
+          log('Batería subida (modo local): ' + file.name + ' — ' + lines.length + ' preguntas');
+        } catch (e) {
+          log('No se pudo leer el archivo de batería');
+        }
+        return;
+      }
       const fd = new FormData();
       fd.append('file', file);
       try {

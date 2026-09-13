@@ -16,13 +16,26 @@ BroadcastChannel). Ideal para probar la interfaz y enseñarla.
    el editor de layout, los sonidos (en la pestaña de proyección)…
 
 > 💡 El modo DEMO se activa automáticamente en GitHub Pages (o con `?demo=1` en la URL).
-> La batería de preguntas incluida es **una muestra** (12 preguntas de ejemplo).
+> Incluye la **batería completa** de preguntas del sistema.
+
+## ✏️ Es un sistema editable y persistente (por navegador)
+
+En modo DEMO el sistema se comporta como el real y **guarda los cambios en tu navegador**
+(localStorage), así que sobreviven a las recargas:
+
+- **Preguntas**: añadir, editar, borrar, mover, marcar usadas (✓/↩), **▶ Siguiente**, pegar
+  texto y **subir un `.txt`** (todo persistente).
+- **Jugadores y configuración**: nombres, colores, puntos/vidas, modos, toggles…
+- **Layout**: posiciones y tamaños del escenario.
+
+Para **volver a la batería original**: borra los datos del sitio en tu navegador
+(DevTools → Application → Clear site data) o pulsa "Vaciar batería" y recarga.
 
 ## ⚠️ Qué NO hace (es un simulador)
 
 - No hay hardware: los pulsadores físicos, luces, OLED y LED RGB no existen aquí.
 - No sincroniza **entre dispositivos** distintos (solo pestañas del mismo navegador).
-- Las subidas (MP3, imágenes) y la edición de la batería no se guardan de forma permanente.
+- Las **subidas de MP3 e imágenes** de animación no funcionan (no hay servidor de archivos).
 
 ## 🧩 El proyecto real
 

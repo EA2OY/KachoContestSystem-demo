@@ -1,12 +1,288 @@
-¿Qué significan las siglas LAN? / Local Area Network: una red de área local
-¿Cuántos bits tiene un byte? / 8 bits
-¿Qué lenguaje se usa para dar estilo a las páginas web? / CSS
-¿Cuál es el puerto por defecto del protocolo HTTP? / El 80 (HTTPS usa el 443)
-¿Qué animal es la mascota de Linux? / Un pingüino llamado Tux
-¿Quién creó el núcleo Linux y en qué año? / Linus Torvalds, en 1991
-¿Qué significan las siglas GPU? / Graphics Processing Unit: la unidad de procesado gráfico
-¿Cuántos jugadores por equipo hay en Counter-Strike 2? / 5 por equipo (10 en total)
-¿Qué juego popularizó el battle royale con 100 jugadores cayendo en una isla? / Fortnite
-¿Qué consola lanzó Sony en 1994 y popularizó el CD-ROM? / La PlayStation
-¿Qué tecnología de radio usa Meshtastic para sus redes de malla? / LoRa (banda ISM sin licencia)
-¿Qué comando de Linux lista el contenido de un directorio? / ls
+¿En qué ciudad se celebra habitualmente la Navarra Lan Party? / Pamplona
+¿Qué pabellón del recinto Navarra Arena acoge normalmente la Navarra Lan Party? / Pabellón Anexo
+¿Cómo se llama la asociación principal que organiza la Navarra Lan Party junto a la Fundación UPNA? / Asociación Navarra de Innovación y Tecnología (Navarra LAN Party)
+¿Qué velocidad de conexión a red de alta velocidad suele ofrecer la Navarra Lan Party a sus participantes? / 10 Gbps
+¿En qué año se celebró la primera edición de la Navarra Lan Party? / 2018
+¿Qué término define a los asistentes que acuden a una LAN party con su propio ordenador? / BYOC (Bring Your Own Computer)
+¿Cómo se llama el concurso donde los participantes acuden disfrazados de personajes de ficción? / Cosplay
+¿Qué área de la Navarra Lan Party está abierta al público general con consolas y actividades gratuitas? / Open Space
+¿Qué tipo de cable de red se recomienda como mínimo para conectarse al switch en una LAN party? / Cat 6
+¿Cómo se llama la tecnología de red inalámbrica de última generación basada en el estándar 802.11ax? / Wi-Fi 6
+¿Qué puerto de red por defecto utiliza el protocolo HTTP? / Puerto 80
+¿Qué protocolo seguro sustituye a HTTP para el tráfico web cifrado? / HTTPS
+¿Qué puerto por defecto utiliza el protocolo SSH para conexiones remotas seguras? / Puerto 22
+¿Cómo se llama el componente del ordenador considerado su cerebro? / CPU o Procesador
+¿Qué siglas identifican a la memoria de acceso aleatorio de un ordenador? / RAM
+¿Qué tipo de disco duro no tiene partes mecánicas móviles y usa memoria flash? / SSD
+¿Qué fabricante produce la línea de tarjetas gráficas GeForce RTX? / NVIDIA
+¿Qué arquitectura de procesadores domina el mercado de la telefonía móvil? / ARM
+¿Qué comando en sistemas Linux se usa para listar el contenido de un directorio? / ls
+¿Qué comando en la terminal de Linux muestra la ruta completa del directorio actual? / pwd
+¿Qué sistema operativo de código abierto fue creado por Linus Torvalds en 1991? / Linux
+¿Qué protocolo asigna direcciones IP automáticamente a los dispositivos de una red? / DHCP
+¿Qué significan las siglas IP en el ámbito de las redes informáticas? / Internet Protocol
+¿Cuál es la dirección IP de bucle de retorno o localhost por defecto en IPv4? / 127.0.0.1
+¿Cuántos bits componen una dirección IPv4? / 32 bits
+¿Cuántos bits componen una dirección IPv6? / 128 bits
+¿Qué dispositivo de red dirige los paquetes de datos entre distintas redes? / Router
+¿Qué tipo de conector es el más común actualmente para la carga y datos en smartphones Android? / USB-C
+¿Qué sigla define a la unidad central de procesamiento gráfico? / GPU
+¿Qué lenguaje de programación usa la extensión de archivo .py? / Python
+¿Qué lenguaje de programación estructurado es la base sobre la que se construyó C++? / C
+¿Qué lenguaje se utiliza principalmente para dar estilo a las páginas web HTML? / CSS
+¿Qué herramienta de control de versiones distribuido fue creada por Linus Torvalds? / Git
+¿En qué plataforma de desarrollo colaborativo el logotipo es un gato pulpo llamado Octocat? / GitHub
+¿Qué nombre recibe el software malicioso que secuestra datos y pide un rescate para liberarlos? / Ransomware
+¿Qué término define la prueba de seguridad donde se intenta penetrar un sistema con permiso? / Pentesting
+¿Cómo se llama el ataque informático que colapsa un servidor enviando tráfico masivo desde múltiples fuentes? / DDoS
+¿Qué arquitectura de red permite a los nodos comunicarse directamente entre sí sin un servidor central? / Peer-to-Peer (P2P)
+¿Qué protocolo inalámbrico de bajo consumo opera en la banda de 868 MHz en Europa para redes comunitarias? / LoRaWAN
+¿Qué firmware de código abierto para dispositivos Mesh en banda de aficionados y libre usa cifrado AES? / Meshtastic
+¿Cómo se llama el creador del manga y anime Dragon Ball? / Akira Toriyama
+¿Cuál es el nombre verdadero de Son Goku en su planeta natal? / Kakaroto
+¿Qué fruta del diablo comió Monkey D. Luffy en One Piece? / Fruta Gomu Gomu (o Hito Hito: Modelo Nika)
+¿Cómo se llama el cuaderno sobrenatural que permite matar a cualquiera cuyo nombre se escriba en él? / Death Note
+¿Qué Shinigami acompaña a Light Yagami en el anime Death Note? / Ryuk
+¿En qué anime los humanos luchan contra gigantes dentro de tres enormes murallas? / Ataque a los Titanes (Shingeki no Kyojin)
+¿Cómo se llama el protagonista del anime Naruto? / Naruto Uzumaki
+¿Qué monstruo de bolsillo es la mascota oficial de la franquicia Pokémon? / Pikachu
+¿Qué tipo de alquimia prohíbe realizar la regla principal en Fullmetal Alchemist? / Transmutación humana
+¿En qué serie de anime el protagonista gana cualquier pelea de un solo puñetazo? / One Punch Man
+¿Cómo se llama el protagonista de One Punch Man? / Saitama
+¿Qué anime de Mechas presenta a los robots EVA pilotados por adolescentes como Shinji Ikari? / Neon Genesis Evangelion
+¿Cómo se llama la organización que gestiona el proyecto de instrumentalización humana en Evangelion? / NERV
+¿En qué anime un científico loco descubre cómo enviar mensajes al pasado usando un microondas? / Steins;Gate
+¿Cómo se llama la espada icónica que porta Kirito en Sword Art Online? / Elucidator
+¿Qué estudio de animación japonés fue cofundado por Hayao Miyazaki? / Studio Ghibli
+¿Cómo se llama el espíritu del bosque con forma de criatura gigante en una película de Studio Ghibli? / Totoro
+¿Qué anime sigue las aventuras de Spike Spiegel a bordo de una nave espacial de cazarrecompensas? / Cowboy Bebop
+¿Qué alimento le encanta comer al Shinigami Ryuk en Death Note? / Manzanas
+¿Cómo se llama el titán que destruye el muro Maria en el primer episodio de Ataque a los Titanes? / Titán Colosal
+¿Qué vehículo convertido en máquina del tiempo usan en Regreso al Futuro? / DeLorean DMC-12
+¿Qué velocidad en millas por hora debe alcanzar el DeLorean para viajar en el tiempo? / 88 mph
+¿Cuál es la respuesta a la pregunta final sobre la vida, el universo y todo lo demás según Guía del autoestopista galáctico? / 42
+¿Qué personaje de Star Wars pronuncia la famosa frase "Yo soy tu padre"? / Darth Vader
+¿Cómo se llama el planeta natal de Spock en Star Trek? / Vulcano
+¿Qué droide astromecánico acompaña siempre a C-3PO en Star Wars? / R2-D2
+¿Qué mineral es la principal debilidad de Superman? / Kryptonita
+¿Cómo se llama el alter ego superheroico de Bruce Wayne? / Batman
+¿Qué superhéroe de Marvel fue picado por una araña radiactiva? / Spider-Man (Peter Parker)
+¿De qué metal ficticio está hecho el escudo del Capitán América? / Vibranium
+¿Cómo se llama la inteligencia artificial creada por Tony Stark que gestiona su traje en las primeras películas? / J.A.R.V.I.S.
+¿En qué película de Matrix el protagonista debe elegir entre la pastilla roja y la azul? / Matrix (1999)
+¿Cómo se llama el protagonista de la saga Matrix interpretado por Keanu Reeves? / Neo
+¿Qué actor interpreta a Gandalf en la trilogía cinematográfica de El Señor de los Anillos? / Ian McKellen
+¿Cómo se llama la criatura que llama "mi tesoro" al Único Anillo en El Señor de los Anillos? / Gollum
+¿En qué película de culto de 1982 los cazadores persiguen a androides rebeldes llamados replicantes? / Blade Runner
+¿Qué director dirigió la película Blade Runner original? / Ridley Scott
+¿Cómo se llama el hotel embrujado en la película El Resplandor? / Hotel Overlook
+¿Qué director de cine es famoso por dirigir Pulp Fiction y Kill Bill? / Quentin Tarantino
+¿Qué personaje lleva un parche en el ojo y debe rescatar al presidente en 1997: Rescate en Nueva York? / Snake Plissken
+¿Qué número de modelo tiene el Terminator enviado a matar a Sarah Connor en la película de 1984? / T-800
+¿Cómo se llama la computadora central con un ojo rojo que controla la nave en 2001: Una odisea del espacio? / HAL 9000
+¿En qué saga de ciencia ficción aparece la frase "Que la Fuerza te acompañe"? / Star Wars
+¿Qué actor encarnó al Joker en la película El Caballero Oscuro de 2008? / Heath Ledger
+¿Cómo se llama el reino ficticio africano del que es rey Black Panther? / Wakanda
+¿Cuál es el nombre real del mercenario Deadpool? / Wade Wilson
+¿Qué arma utiliza Thor que fue forjada en Nidavellir para sustituir a su martillo Mjolnir? / Stormbreaker
+¿Qué lenguaje ficticio fue creado por J.R.R. Tolkien para los elfos de la Tierra Media? / Quenya (o Sindarin)
+¿Cómo se llama la nave espacial pilotada por Han Solo y Chewbacca? / Halcón Milenario
+¿En qué película de animación un robot compactador de basura se enamora de una sonda llamada EVA? / WALL-E
+¿Qué director dirigió la película de ciencia ficción e ilusión Origen (Inception)? / Christopher Nolan
+¿Qué número representa el valor base cero en la numeración binaria junto al 1? / 0
+¿Cuántos bytes hay en un kilobyte en el sistema binario tradicional (kibibyte)? / 1024
+¿Qué físico formuló la teoría de la relatividad general? / Albert Einstein
+¿Qué constante matemática representa la relación entre la longitud de una circunferencia y su diámetro? / Pi (π)
+¿Cuál es el elemento químico más abundante en el universo? / Hidrógeno
+¿Qué planeta del sistema solar es conocido como el planeta rojo? / Marte
+¿Cuál es el océano más grande de la Tierra? / Océano Pacífico
+¿Qué órgano del cuerpo humano consume aproximadamente el 20% de la energía del organismo? / El cerebro
+¿Cuál es el metal más denso conocido que existe de forma natural? / Osmio
+¿En qué año llegó el ser humano a la Luna por primera vez? / 1969
+¿Cómo se llamaba el primer satélite artificial enviado al espacio por la Unión Soviética? / Sputnik 1
+¿Qué científico descubrió la penicilina en 1928? / Alexander Fleming
+¿En qué país se inventó la imprenta de tipos móviles moderna por Gutenberg? / Alemania
+¿Cuál es el río más largo del mundo? / Río Amazonas
+¿Cuál es la montaña más alta sobre el nivel del mar en la Tierra? / Monte Everest
+¿Qué gas componen principalmente la atmósfera terrestre en un 78%? / Nitrógeno
+¿Qué partículas subatómicas tienen carga eléctrica negativa? / Electrones
+¿Qué fuerza mantiene a los planetas orbitando alrededor del Sol? / La gravedad
+¿Cuál es la velocidad de la luz en el vacío aproximada en kilómetros por segundo? / 300.000 km/s
+¿Qué mamífero es el único capaz de volar de forma activa? / El murciélago
+¿Cuál es el animal vivo más grande del planeta Tierra? / La ballena azul
+¿Qué estructura biológica contiene la información genética de los seres vivos? / ADN
+¿Qué lenguaje informático fue diseñado por Brendan Eich en solo 10 días en 1995? / JavaScript
+¿Qué compañía informática inventó el ratón de ordenador y la interfaz gráfica moderna en su laboratorio de PARC? / Xerox
+¿En qué año se lanzó el primer modelo de iPhone al mercado? / 2007
+¿Cómo se llama la primera programadora de la historia, que trabajó sobre la máquina analítica de Babbage? / Ada Lovelace
+¿Qué dispositivo considerado el primer ordenador electromecánico fue usado para descifrar la máquina Enigma? / Bombe (o Colossus)
+¿Qué matemático británico fue clave en el descifrado de la máquina Enigma durante la II Guerra Mundial? / Alan Turing
+¿Cómo se llama el test diseñado para determinar si una máquina puede exhibir comportamiento inteligente? / Test de Turing
+¿Qué sistema operativo para smartphones está basado en el núcleo Linux y desarrollado por Google? / Android
+¿Qué popular juego de bloques de construcción fue creado originalmente por Markus Persson "Notch"? / Minecraft
+¿Cómo se llama el motor de videojuegos desarrollado por Epic Games ampliamente usado en la industria? / Unreal Engine
+¿Qué juego popular popularizó el género Battle Royale con 100 jugadores cayendo en una isla desde un autobús volador? / Fortnite
+¿Qué consola de videojuegos de 16 bits de SEGA rivalizó directamente con la Super Nintendo? / SEGA Mega Drive (o Genesis)
+¿Qué consola lanzada por Sony en 1994 popularizó el uso del CD-ROM para juegos domésticos? / PlayStation
+¿En qué franquicia de videojuegos el protagonista se llama Link y debe rescatar a la princesa Zelda? / The Legend of Zelda
+¿Qué fontanero de bigote rojo es la mascota oficial de Nintendo? / Mario
+¿Qué videojuego de rol masivo online (MMORPG) desarrollado por Blizzard se ambienta en el mundo de Azeroth? / World of Warcraft
+¿Cómo se llama el juego de cartas coleccionables de fantasía creado por Richard Garfield en 1993? / Magic: The Gathering
+¿Qué letra clave del teclado usan los jugadores en PC para agacharse tradicionalmente junto a WASD? / Ctrl (o C)
+¿Qué término define el tiempo que tarda un paquete de datos en ir desde el origen hasta el destino y volver? / Ping (o Latencia)
+¿Qué tipo de cable utiliza luz reflejada en vidrio para transmitir datos a alta velocidad? / Fibra óptica
+¿Qué protocolo se encarga de traducir nombres de dominio como google.com a direcciones IP? / DNS
+¿Qué puerto lógico estándar utiliza el servicio de transporte seguro de archivos SFTP? / Puerto 22
+¿Qué sistema de archivos es el nativo en las instalaciones modernas de Windows? / NTFS
+¿Qué sistema de archivos es el más usado históricamente para máxima compatibilidad en péndrives USB? / FAT32
+¿Qué arquitectura de procesadores de 64 bits es la estándar en ordenadores de sobremesa Intel y AMD? / x86-64 (o x64)
+¿Qué significa la sigla BIOS en una placa base de ordenador? / Basic Input/Output System
+¿Qué firmware más moderno ha reemplazado casi por completo a la antigua BIOS en placas base? / UEFI
+¿Qué componente limpia el calor generado por el procesador transfiriéndolo al aire o líquido? / Disipador (o Cooler)
+¿Qué pasta térmica se aplica entre el procesador y el disipador para mejorar la transferencia de calor? / Pasta térmica
+¿Qué sigla define la eficiencia de una fuente de alimentación certificada con sellos como Bronze o Gold? / 80 Plus
+¿Qué estándar de tarjeta de expansión se utiliza para conectar las tarjetas gráficas a la placa base? / PCIe (PCI Express)
+¿Qué tecnología de refresco adaptable desarrolló NVIDIA para evitar el corte de pantalla en monitores? / G-Sync
+¿Qué tecnología equivalente a G-Sync fue desarrollada por AMD basada en estándares abiertos? / FreeSync
+¿Qué valor mide la tasa de refresco de un monitor de gaming en ciclos por segundo? / Hertzios (Hz)
+¿Qué siglas identifican a las pantallas de diodos orgánicos de emisión de luz? / OLED
+¿Qué formato de compresión de audio revolucionó la distribución de música digital en la década de 1990? / MP3
+¿Qué formato de imagen soporta animaciones simples sin necesidad de reproducir vídeo? / GIF
+¿Qué formato de archivo ejecutable es el estándar en sistemas operativos Windows? / .exe
+¿Qué formato de paquete de instalación se utiliza de forma nativa en sistemas operativos Android? / APK
+¿Qué herramienta de virtualización mediante contenedores ligeros fue lanzada en 2013? / Docker
+¿Qué plataforma de orquestación de contenedores de código abierto fue desarrollada originalmente por Google? / Kubernetes
+¿Qué comando en Git se usa para descargar los cambios de un repositorio remoto y fusionarlos con el local? / git pull
+¿Qué editor de código fuente desarrollado por Microsoft es actualmente el más popular entre programadores? / Visual Studio Code
+¿Qué plataforma de streaming de vídeo en directo es la referencia principal en la cultura LAN party? / Twitch
+¿Qué servicio de mensajería para comunidades y gamers utiliza canales de voz y texto con servidores dedicados? / Discord
+¿Cómo se llama la placa de desarrollo de código abierto basada en microcontrolador muy popular en robótica? / Arduino
+¿Qué pequeña computadora de placa única (SBC) británica fue creada para enseñar informática en escuelas? / Raspberry Pi
+¿Qué microcontrolador de bajo coste con Wi-Fi integrado fabricado por Espressif es muy usado en IoT? / ESP8266 (o ESP32)
+¿Qué red inalámbrica ad-hoc permite interconectar dispositivos en malla sin depender de infraestructura móvil? / Red Mesh
+¿Cómo se llama el estándar de comunicación de campo cercano usado para pagos móviles y etiquetas inteligentes? / NFC
+¿Qué banda de frecuencias de radio sin licencia se utiliza popularmente tanto para Wi-Fi como para microondas? / 2.4 GHz
+¿En qué anime aparece la famosa frase "Omae wa mou shindeiru"? / El Puño de la Estrella del Norte (Hokuto no Ken)
+¿Cómo se llama el titán cambian que posee Eren Jaeger al inicio de Ataque a los Titanes? / Titán de Ataque
+¿Qué personaje de anime es un alquimista estatal conocido como el Alquimista de Acero? / Edward Elric
+¿Cómo se llama el gato blanco con luna en la frente que acompaña a Usagi en Sailor Moon? / Luna
+¿Qué nombre recibe el juego de realidad virtual inmersivo en el anime Sword Art Online? / SAO
+¿Qué personaje de Dragon Ball viene del futuro para advertir sobre los androides? / Trunks
+¿Cómo se llama el demonio sellado dentro del cuerpo de Naruto Uzumaki? / El Zorro de Nueve Colas (Kurama)
+¿Qué poder o habilidad especial usan los cazadores en el anime Hunter x Hunter? / Nen
+¿En qué anime los personajes utilizan tarjetas llamadas "Cartas Clow"? / Cardcaptor Sakura
+¿Qué ciborg femenina es la protagonista de la franquicia Ghost in the Shell? / Motoko Kusanagi
+¿Cómo se llama la ciudad ficticia donde transcurre la trama principal de Akira? / Neo-Tokio
+¿Qué director japonés dirigió la icónica película de anime Akira en 1988? / Katsuhiro Otomo
+¿Qué criatura mágica con forma de perro-león blanco transporta a los personajes en La Princesa Mononoke? / Moro (o Moro no Kimi)
+¿Qué objeto busca encontrar el pirata Monkey D. Luffy para convertirse en el Rey de los Piratas? / El One Piece
+¿Cómo se llama el cazador de demonios protagonista del anime Demon Slayer (Kimetsu no Yaiba)? / Tanjiro Kamado
+¿Qué hermana de Tanjiro en Demon Slayer es convertida en demonio pero conserva su humanidad? / Nezuko
+¿En qué anime un estudiante encuentra un cuaderno que le permite actuar como el vigilante "Kira"? / Death Note
+¿Qué grupo de criminales vistiendo túnicas negras con nubes rojas es el enemigo principal en Naruto Shippuden? / Akatsuki
+¿Qué nave espacial es la sede principal y hogar del equipo en Bebop? / Bebop
+¿Qué anime parodia el género Isekai mostrando a un protagonista que muere al asustarse por un tractor? / KonoSuba
+¿Qué actor interpreta a Neo en la saga de películas Matrix? / Keanu Reeves
+¿En qué película de 1993 los dinosaurios son clonados a partir de ADN encontrado en ámbar? / Jurassic Park
+¿Qué director de cine creó las sagas de Indiana Jones y Star Wars junto a George Lucas? / Steven Spielberg
+¿Cómo se llama la inteligencia artificial malvada que controla los robots en la saga Terminator? / Skynet
+¿Qué personaje de cómic lleva un traje blindado impulsado por un reactor Arc en el pecho? / Iron Man
+¿Cómo se llama el villano principal que consigue reunir las seis Gemas del Infinito en Vengadores: Infinity War? / Thanos
+¿Qué planeta destruye la Estación Espacial Estrella de la Muerte en la primera película de Star Wars? / Alderaan
+¿En qué película de culto de animación un robot gigante de hierro traba amistad con un niño llamado Hogarth? / El gigante de hierro
+¿Qué nave espacial de transporte comercial es aterrorizada por una criatura en Alien, el octavo pasajero? / Nostromo
+¿Cómo se llama la criatura alienígena parasitaria que sale del pecho de su huésped en la saga Alien? / Xenomorfo
+¿Qué director dirigió la película de ciencia ficción Avatar en 2009? / James Cameron
+¿Cómo se llama el mundo alienígena de piel azul donde transcurre la película Avatar? / Pandora
+¿Qué villano de Batman utiliza un gas del miedo para aterrorizar a sus víctimas? / El Espantapájaros (Dr. Jonathan Crane)
+¿Qué ciudad patrulla Batman para combatir el crimen? / Gotham City (Ciudad Gótica)
+¿Cuál es el nombre real del superhéroe conocido como Lobezno o Wolverine en X-Men? / Logan (o James Howlett)
+¿Qué actor interpretó al Capitán Jack Sparrow en la saga Piratas del Caribe? / Johnny Depp
+¿Cómo se llama el coche parlante equipado con IA en la serie de televisión El coche fantástico? / KITT
+¿En qué serie de televisión de ciencia ficción de los 90 los agentes Mulder y Scully investigan lo paranormal? / Expediente X (The X-Files)
+¿Cómo se llama el juego de mesa dentro de la película de 1995 donde los elementos de la selva cobran vida? / Jumanji
+¿Qué saga cinematográfica presenta a un joven mago con una cicatriz en forma de rayo en la frente? / Harry Potter
+¿Cómo se llama la casa a la que pertenece Harry Potter en la escuela Hogwarts? / Gryffindor
+¿Cuál es la primera ley de la robótica según el escritor de ciencia ficción Isaac Asimov? / Un robot no puede hacer daño a un ser humano ni permitir que sufra daño
+¿Qué compañía fue fundada por Steve Jobs y Steve Wozniak en un garaje en 1976? / Apple
+¿Qué científico formuló las tres leyes del movimiento que fundamentan la física clásica? / Isaac Newton
+¿Qué elemento de la tabla periódica tiene el símbolo químico Au? / Oro
+¿Qué elemento químico tiene el símbolo Fe en la tabla periódica? / Hierro
+¿Cuál es la velocidad del sonido en el aire a nivel del mar aproximadamente? / 343 m/s (o 1235 km/h)
+¿Qué fenómeno astrofísico ocurre cuando una estrella masiva colapsa al final de su vida explocionando? / Supernova
+¿Qué región del espacio tiene una atracción gravitatoria tan intensa que ni la luz puede escapar? / Agujero negro
+¿Cómo se llama la galaxia en la que se encuentra nuestro sistema solar? / Vía Láctea
+¿Qué tipo de radiación invisible para el ojo humano es la responsable del bronceado en la piel? / Radiación ultravioleta (UV)
+¿Qué gas de efecto invernadero se libera principalmente en la combustión de hidrocarburos? / Dióxido de carbono (CO2)
+¿Qué instrumento de laboratorio se utiliza para observar objetos demasiado pequeños para el ojo humano? / Microscopio
+¿Qué escala de temperatura fija el cero absoluto a los -273,15 grados Celsius? / Escala Kelvin
+¿Qué famosa ecuación de Albert Einstein relaciona la masa con la energía de forma equivalente? / E = mc²
+¿Cuál es el planeta más grande de nuestro sistema solar? / Júpiter
+¿Qué planeta del sistema solar es famoso por su complejo sistema de anillos visibles? / Saturno
+¿Qué fuerza invisible atrae a los objetos hacia el centro de la Tierra? / La gravedad
+¿Qué animal es capaz de regenerar sus extremidades completas y vive en los lagos de México? / El ajolote
+¿Cómo se llaman las estructuras celulares fotosintéticas que dan el color verde a las plantas? / Cloroplastos
+¿Qué animal terrestre es considerado el más rápido del mundo en distancias cortas? / El guepardo
+¿Qué tipo de sangre es considerada la donante universal en el sistema ABO y Rh? / O negativo (O-)
+¿Qué órgano del cuerpo humano produce la insulina para regular la glucosa? / El páncreas
+¿Qué hueso es el más largo y fuerte del cuerpo humano? / El fémur
+¿Cómo se llama el proceso por el cual las plantas convierten la luz solar en energía química? / Fotosíntesis
+¿Cuál es el país con mayor superficie territorial del planeta Tierra? / Rusia
+¿Qué ciudad es la capital de Japón? / Tokio
+¿Cuál es el desierto cálido más grande del mundo? / Desierto del Sáhara
+¿Qué mar interior sin salida al océano es famoso por su altísima salinidad que permite flotar sin esfuerzo? / Mar Muerto
+¿En qué continente se encuentra el volcán Kilimanjaro? / África
+¿Cómo se llama el tratado o acuerdo de red que definió los fundamentos de la red de redes en 1983? / TCP/IP
+¿Qué protocolo web se utiliza para la transferencia de hipertexto básica sin cifrado? / HTTP
+¿Qué sigla define la tecnología de almacenamiento de datos agrupando múltiples discos físicos? / RAID
+¿Qué tipo de RAID duplica los datos en dos discos mediante el proceso conocido como espejo? / RAID 1
+¿Qué tipo de RAID distribuye los datos entre varios discos para ganar velocidad pero sin tolerancia a fallos? / RAID 0
+¿Qué comando en la consola de comandos de Windows muestra la configuración de red y la dirección IP? / ipconfig
+¿Qué comando equivalente a ipconfig se usa en sistemas Linux modernos para ver las interfaces de red? / ip addr (o ifconfig)
+¿Qué herramienta de línea de comandos analiza la ruta que siguen los paquetes hasta un host remoto? / traceroute (o tracert)
+¿Qué archivo de texto local en el sistema operativo mapea manualmente nombres de dominio con IPs? / Archivo hosts
+¿Qué lenguaje de marcas es el estándar estructurado para crear la estructura de las páginas web? / HTML
+¿Qué formato de intercambio de datos ligero basado en texto estructurado usa claves y valores? / JSON
+¿Qué lenguaje de marcas basado en etiquetas abiertas es ampliamente usado para archivos de configuración? / XML
+¿Qué lenguaje de serialización de datos legible por humanos es el estándar en entornos como Ansible y Docker Compose? / YAML
+¿Qué base de datos relacional de código abierto utiliza el delfín "Sakila" como su mascota icónica? / MySQL
+¿Qué popular base de datos no relacional (NoSQL) almacena datos en documentos similares a JSON? / MongoDB
+¿Qué sistema de almacenamiento en memoria basado en clave-valor se usa habitualmente como caché de alta velocidad? / Redis
+¿Qué servidor web de código abierto y alto rendimiento es famoso por su arquitectura orientada a eventos? / NGINX
+¿Qué servidor web de código abierto histórico de la Apache Software Foundation ha dominado la web durante décadas? / Apache HTTP Server
+¿Qué arquitectura de software separa la aplicación en tres capas: Modelo, Vista y Controlador? / Patrón MVC
+¿Qué principio de programación busca evitar la repetición de código con las siglas DRY? / Don't Repeat Yourself
+¿Qué término informático define un error o fallo en un programa de software? / Bug
+¿Cómo se llama el proceso de buscar y corregir errores en el código fuente de un programa? / Depuración (o Debugging)
+¿Qué término inglés define al hardware o software obsoleto pero que se mantiene en uso por necesidad? / Legacy
+¿Qué tecnología de red móvil de quinta generación ofrece menor latencia y mayores velocidades de transferencia? / 5G
+¿Qué sistema global de navegación por satélite es desarrollado y operado por la Unión Europea? / Galileo
+¿Qué sistema de posicionamiento satelital es propiedad de las fuerzas armadas de los Estados Unidos? / GPS
+¿Qué tipo de ataque de ingeniería social utiliza correos falsos imitando entidades legítimas para robar credenciales? / Phishing
+¿Qué método de autenticación requiere dos formas de verificación independientes para acceder a un sistema? / 2FA (o Autenticación de doble factor)
+¿Qué dispositivo de hardware filtra el tráfico de red entrante y saliente basándose en reglas de seguridad? / Cortafuegos (Firewall)
+¿Qué tecnología crea un túnel privado cifrado sobre una red pública como Internet? / VPN (Virtual Private Network)
+¿Qué tipo de cifrado utiliza la misma clave tanto para cifrar como para descifrar la información? / Cifrado simétrico
+¿Qué tipo de cifrado utiliza un par de claves, una pública para cifrar y una privada para descifrar? / Cifrado asimétrico (o Clave pública)
+¿Qué algoritmo de cifrado asimétrico fue desarrollado en 1977 por Rivest, Shamir y Adleman? / RSA
+¿Qué función matemática unidireccional convierte un conjunto de datos de entrada en una cadena fija de caracteres? / Función Hash
+¿Qué algoritmo hash de 128 bits ampliamente usado en el pasado se considera hoy obsoleto y no seguro? / MD5
+¿Qué familia de funciones hash criptográficas incluye a SHA-256 ampliamente usado en Bitcoin? / SHA-2 (o SHA)
+¿Qué tecnología de libro mayor distribuido y descentralizado es la base de las criptomonedas? / Blockchain
+¿Qué criptomoneda fue creada en 2009 por la persona o grupo bajo el seudónimo Satoshi Nakamoto? / Bitcoin
+¿Cómo se llama la máquina virtual que ejecuta contratos inteligentes en la red Ethereum? / EVM (Ethereum Virtual Machine)
+¿Qué tipo de token criptográfico representa un activo digital único e intercambiable en una cadena de bloques? / NFT (Token No Fungible)
+¿Qué concepto de red propone una Internet descentralizada construida sobre tecnologías blockchain? / Web3
+¿Qué proyecto de red de radio comunitaria global busca conectar sensores IoT mediante la banda ISM? / The Things Network
+¿Qué protocolo de mensajería ligero basado en publicación/suscripción es el estándar en IoT? / MQTT
+¿Qué tipo de conector coaxial es el más habitual en antenas para equipos de radio de aficionado en VHF/UHF? / PL-259 (o conector SO-239 / N / SMA)
+¿Qué parámetro mide la eficiencia del acoplamiento entre la línea de transmisión y la antena en radiofrecuencia? / ROE (Relación de Onda Estacionaria / SWR)
+¿Qué tipo de antena consta de dos elementos conductores alineados de igual longitud alimentados en el centro? / Dipolo
+¿Qué instrumento de medida especializado permite medir la impedancia y adaptación de antenas en un espectro de frecuencias? / NanoVNA
+¿Qué modo digital de comunicación por radio envía mensajes cortos de texto y coordenadas mediante tramas AX.25? / APRS
+¿Qué banda de radiofrecuencia de uso libre en 446 MHz no requiere licencia de radioaficionado en Europa? / PMR446
+¿Qué tipo de batería basada en litio destaca por su mayor estabilidad térmica y ciclos de vida frente a Li-Po? / LiFePO4 (Litio Ferrofosfato)
+¿Qué circuito integrado gestiona el estado de carga, descarga y equilibrado de las celdas en una batería de litio? / BMS (Battery Management System)
+¿Qué término define el modo de consumo ultrasilencioso y bajo consumo en microcontroladores para ahorrar energía? / Deep Sleep
+¿Qué tipo de pantalla consume energía únicamente cuando cambia la imagen que muestra en pantalla? / Pantalla de tinta electrónica (E-Ink)
+¿Qué festival o encuentro informático anual reúne a apasionados de la tecnología, redes y modding durante varios días? / LAN party
