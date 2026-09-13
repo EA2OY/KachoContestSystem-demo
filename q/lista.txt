@@ -1,0 +1,12 @@
+¿Qué significan las siglas LAN? / Local Area Network: una red de área local
+¿Cuántos bits tiene un byte? / 8 bits
+¿Qué lenguaje se usa para dar estilo a las páginas web? / CSS
+¿Cuál es el puerto por defecto del protocolo HTTP? / El 80 (HTTPS usa el 443)
+¿Qué animal es la mascota de Linux? / Un pingüino llamado Tux
+¿Quién creó el núcleo Linux y en qué año? / Linus Torvalds, en 1991
+¿Qué significan las siglas GPU? / Graphics Processing Unit: la unidad de procesado gráfico
+¿Cuántos jugadores por equipo hay en Counter-Strike 2? / 5 por equipo (10 en total)
+¿Qué juego popularizó el battle royale con 100 jugadores cayendo en una isla? / Fortnite
+¿Qué consola lanzó Sony en 1994 y popularizó el CD-ROM? / La PlayStation
+¿Qué tecnología de radio usa Meshtastic para sus redes de malla? / LoRa (banda ISM sin licencia)
+¿Qué comando de Linux lista el contenido de un directorio? / ls

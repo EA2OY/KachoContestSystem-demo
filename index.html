@@ -1,0 +1,269 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Date el Bit — Sistema de pulsadores</title>
+<link rel="stylesheet" href="css/style.css?v=20260905j">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="tabs wd-left">
+    <span id="wd-chip" class="chip chip-bad">SIN SEÑAL</span>
+    <button id="btn-preload" class="btn chip-toggle" title="Descarga al navegador los MP3, GIFs e imágenes antes de jugar: así el primer uso no pide nada al ESP32 a mitad de ronda (sin cortes ni latencia)">Precargar</button>
+  </div>
+  <div class="tabs">
+    <button class="tab active" data-tab="proyeccion">Proyección</button>
+    <button class="tab" data-tab="ajustes">Ajustes</button>
+  </div>
+  <div class="status">
+    <span id="conn-status" class="chip chip-dim">DEMO</span>
+    <span id="version-tag" class="chip chip-dim">Kacho-Contest-System v1.0</span>
+    <span id="phase-chip" class="chip">ESPERANDO</span>
+    <span id="fs-used" class="chip chip-dim" title="Espacio ocupado en la placa (LittleFS)">—</span>
+    <span id="fs-free" class="chip chip-dim" title="Espacio libre en la placa (LittleFS)">—</span>
+  </div>
+</header>
+
+<main>
+  <div id="login" class="panel picker">
+    <h2>Atrápame el Bit</h2>
+    <p class="brand-sub">Sistema de pulsadores para concursos por Kacho</p>
+    <p class="hint">Acceso de la organización. Introduce el PIN y elige.</p>
+    <input type="password" id="pin-input" class="pin-input" maxlength="6" placeholder="PIN"
+           autocomplete="off" inputmode="numeric" enterkeyhint="done">
+    <div class="picker-btns">
+      <button id="btn-modo-super" class="btn btn-primary btn-lg">Panel del super</button>
+      <button id="btn-modo-proyector" class="btn btn-lg">Pantalla de proyección</button>
+    </div>
+    <div id="pin-msg"></div>
+    <p class="hint small">La pantalla pública se abre en <b>proyector.html</b> (sin PIN).</p>
+  </div>
+
+  <section id="tab-proyeccion" class="tabpage active">
+    <div id="scale-wrap">
+      <div id="stage">
+        <img id="bg" src="img/fondoweb.jpg" alt="" draggable="false" loading="lazy">
+        <div id="players"></div>
+        <div id="hud">
+          <div id="pixel-title">Date El Bit 2026</div>
+          <div id="clock">--:--:--</div>
+          <div id="question"></div>
+          <div id="state-msg"></div>
+          <div id="timer"></div>
+        </div>
+        <div id="blackout"></div>
+        <div id="anim-overlay">
+          <div class="anim-box">
+            <img id="anim-napi" src="" alt="">
+            <div class="anim-tag">¡REARME!</div>
+          </div>
+        </div>
+        <div id="expl-overlay"><div id="expl-text"></div></div>
+        <div id="audio-unlock"><div class="au-box">🔊 Toca la pantalla para activar el sonido</div></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="tab-ajustes" class="tabpage">
+    <div id="admin" class="hidden">
+      <div class="panel">
+        <h2>Jugadores</h2>
+        <div class="row jmodes">
+          <label>Modo de juego:
+            <select id="cfg-gamemode">
+              <option value="puntos">Puntos (clásico)</option>
+              <option value="vidas">Vidas</option>
+            </select>
+          </label>
+          <label class="jmv" hidden>Vidas iniciales:
+            <input type="number" id="cfg-livesstart" value="5" min="1" max="20">
+          </label>
+          <label class="jmv" hidden><input type="checkbox" id="cfg-livesfail"> fallo=-1</label>
+          <span id="jmodes-hint" class="hint"></span>
+        </div>
+        <label class="row">Nº de jugadores:
+          <select id="cfg-numplayers">
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4" selected>4</option>
+          </select>
+        </label>
+        <div id="player-config"></div>
+        <div class="row">
+          <button id="btn-jugadores-ok" class="btn btn-primary">Aceptar cambios</button>
+          <button id="btn-reset-pts" class="btn">Restablecer puntuaciones</button>
+          <span id="jugadores-msg" class="hint"></span>
+        </div>
+        <div class="row">
+          <button id="btn-face-toggle" class="btn chip-toggle">Rostro 8-bit: OFF</button>
+          <button id="btn-halo-toggle" class="btn chip-toggle">Halo color: ON</button>
+          <span class="hint">Rostro: overlay de gestos para napis sin cara. Halo: parpadeo del turno con el color del pulsador.</span>
+        </div>
+      </div>
+
+      <div class="panel">
+        <h2>Control de ronda</h2>
+        <div class="ronda-btns">
+          <button id="btn-arm" class="btn">Arma pregunta</button>
+          <button id="btn-rebote" class="btn">Rebote</button>
+          <button id="btn-rearm" class="btn">Rearme</button>
+          <button id="btn-reset-puls" class="btn" title="Deja los pulsadores en standby: limpia el orden de pulsación y los fallos (X), sin tocar la pregunta ni los puntos">Reset de pulsadores</button>
+          <button id="btn-q-clear" class="btn">Quitar pregunta</button>
+          <button id="btn-expl" class="btn" title="Doble toque: muestra la explicación de la pregunta en el proyector (sin puntos)">Mostrar explicación</button>
+        </div>
+        <label class="row"><input type="checkbox" id="cfg-timer"> Temporizador de respuesta</label>
+        <label class="row">Segundos: <input type="number" id="cfg-timer-secs" value="10" min="3" max="60"></label>
+        <div class="row">
+          <button id="btn-anim-toggle" class="btn chip-toggle">Animación al lanzar: ON</button>
+          <button id="btn-qsnd-toggle" class="btn chip-toggle">Sonido de pregunta: ON</button>
+        </div>
+        <label class="row"><input type="checkbox" id="cfg-sound"> Sonidos (todos)</label>
+        <label class="row">Título (pixel art): <input type="text" id="cfg-title-text" maxlength="24"></label>
+      </div>
+
+      <div class="panel">
+        <h2>Sonidos y animaciones (pruebas)</h2>
+        <p class="hint">Lanza cualquier sonido del sistema o reproduce una animación en el proyector.</p>
+        <h3 class="sub">Sonidos</h3>
+        <div id="snd-bank"></div>
+        <h3 class="sub">Animaciones de rearme</h3>
+        <div id="anim-bank"></div>
+      </div>
+
+      <div class="panel">
+        <h2>Preguntas <span id="q-count" class="hint"></span></h2>
+        <p class="hint">Una pregunta por línea. Opcional: añade una explicación separada con « / » (p. ej. <i>¿Capital? / Pamplona</i>). Sube un .txt, pega texto, o gestiona la lista con los botones de cada pregunta. Doble clic también lanza.</p>
+        <input type="file" id="q-file" accept=".txt,text/plain">
+        <button id="btn-q-upload" class="btn">Subir batería</button>
+        <textarea id="q-paste" rows="6" placeholder="Pega aquí las preguntas (una por línea): entran ARRIBA en su orden..."></textarea>
+        <button id="btn-q-paste" class="btn">Guardar texto en la batería (arriba)</button>
+        <div class="row q-addrow">
+          <input type="text" id="q-add" placeholder="Añadir una pregunta suelta...">
+          <input type="text" id="q-add-exp" placeholder="Explicación (opcional)">
+          <button id="btn-q-add" class="btn">Añadir</button>
+          <button id="btn-q-edit-cancel" class="btn hidden">Cancelar</button>
+        </div>
+        <div class="row">
+          <button id="btn-q-next" class="btn btn-primary" title="Lanza la siguiente pregunta no usada después de la última lanzada (en el orden de la batería). Las usadas quedan atrás; al agotarse, usa 'Limpiar usadas' para reiniciar el ciclo">▶ Siguiente pregunta</button>
+          <input type="text" id="q-filter" placeholder="Filtrar preguntas...">
+          <button id="btn-q-clearused" class="btn">Limpiar usadas</button>
+          <button id="btn-q-clearall" class="btn btn-danger">Vaciar batería</button>
+        </div>
+        <div id="q-list"></div>
+      </div>
+
+      <div class="panel">
+        <h2>Log de rondas</h2>
+        <div class="row">
+          <button id="btn-log-clear" class="btn">Limpiar log</button>
+          <span class="hint">Vacía el histórico de rondas del ESP32 (borra el archivo del log).</span>
+        </div>
+        <div id="log"></div>
+      </div>
+
+      <div class="panel" id="panel-layout">
+        <h2>Layout de pantalla</h2>
+        <button id="btn-editor" class="btn">Editar layout</button>
+        <button id="btn-layout-save" class="btn">Guardar layout</button>
+        <button id="btn-layout-reset" class="btn">Restaurar default</button>
+        <div class="row">
+          <input type="file" id="img-bg" accept="image/jpeg,image/png">
+          <button id="btn-img-bg" class="btn">Subir fondo</button>
+          <button id="btn-img-bg-restore" class="btn">Restaurar original</button>
+          <span class="hint">JPG/PNG · 1920×1080 (mín. 1280×720, máx 1 MB). Se adapta a toda la pantalla.</span>
+        </div>
+        <div id="napi-uploaders"></div>
+        <div id="mini-wrap">
+          <div id="mini-stage">
+            <img id="mini-bg" src="img/fondoweb.jpg" alt="" draggable="false" loading="lazy">
+            <div id="mini-players"></div>
+            <div id="mini-hud">
+              <div class="mini-q" data-hud="question">Pregunta</div>
+              <div class="mini-msg" data-hud="msg">¡PULSÓ!</div>
+              <div class="mini-timer" data-hud="timer">10</div>
+              <div class="mini-clock" data-hud="clock">--:--:--</div>
+            </div>
+            <div id="mini-title"></div>
+          </div>
+        </div>
+        <div id="editor-controls" class="hidden">
+          <div class="row nrow"><span class="nlab">Tamaño nombres:</span><input type="range" id="ctl-name-size" min="10" max="110" value="48"><span class="nudge"><button type="button" class="btn nudge-btn" data-nudge="name" data-dx="-2" title="Mover nombres a la izquierda">←</button><button type="button" class="btn nudge-btn" data-nudge="name" data-dy="-2" title="Mover nombres arriba">↑</button><button type="button" class="btn nudge-btn" data-nudge="name" data-dy="2" title="Mover nombres abajo">↓</button><button type="button" class="btn nudge-btn" data-nudge="name" data-dx="2" title="Mover nombres a la derecha">→</button></span></div>
+          <div class="row nrow"><span class="nlab">Tamaño puntos:</span><input type="range" id="ctl-points-size" min="10" max="140" value="42"><span class="nudge"><button type="button" class="btn nudge-btn" data-nudge="points" data-dx="-2" title="Mover puntos a la izquierda">←</button><button type="button" class="btn nudge-btn" data-nudge="points" data-dy="-2" title="Mover puntos arriba">↑</button><button type="button" class="btn nudge-btn" data-nudge="points" data-dy="2" title="Mover puntos abajo">↓</button><button type="button" class="btn nudge-btn" data-nudge="points" data-dx="2" title="Mover puntos a la derecha">→</button></span></div>
+          <div class="row nrow"><span class="nlab">Tamaño tiempo:</span><input type="range" id="ctl-ptime-size" min="6" max="90" value="23"><span class="nudge"><button type="button" class="btn nudge-btn" data-nudge="ptime" data-dx="-2" title="Mover tiempo a la izquierda">←</button><button type="button" class="btn nudge-btn" data-nudge="ptime" data-dy="-2" title="Mover tiempo arriba">↑</button><button type="button" class="btn nudge-btn" data-nudge="ptime" data-dy="2" title="Mover tiempo abajo">↓</button><button type="button" class="btn nudge-btn" data-nudge="ptime" data-dx="2" title="Mover tiempo a la derecha">→</button></span></div>
+          <div class="row nrow"><span class="nlab">Tamaño título:</span><input type="range" id="ctl-title-size" min="16" max="120" value="56"><span class="nudge"><button type="button" class="btn nudge-btn" data-nudge="title" data-dx="-2" title="Mover título a la izquierda">←</button><button type="button" class="btn nudge-btn" data-nudge="title" data-dy="-2" title="Mover título arriba">↑</button><button type="button" class="btn nudge-btn" data-nudge="title" data-dy="2" title="Mover título abajo">↓</button><button type="button" class="btn nudge-btn" data-nudge="title" data-dx="2" title="Mover título a la derecha">→</button></span></div>
+          <div class="row nrow"><span class="nlab">Tamaño pregunta:</span><input type="range" id="ctl-q-size" min="20" max="110" value="54"><span class="nudge"><button type="button" class="btn nudge-btn" data-nudge="question" data-dx="-2" title="Mover pregunta a la izquierda">←</button><button type="button" class="btn nudge-btn" data-nudge="question" data-dy="-2" title="Mover pregunta arriba">↑</button><button type="button" class="btn nudge-btn" data-nudge="question" data-dy="2" title="Mover pregunta abajo">↓</button><button type="button" class="btn nudge-btn" data-nudge="question" data-dx="2" title="Mover pregunta a la derecha">→</button></span></div>
+          <div class="row nrow"><span class="nlab">Tamaño mensaje:</span><input type="range" id="ctl-msg-size" min="20" max="130" value="64"><span class="nudge"><button type="button" class="btn nudge-btn" data-nudge="msg" data-dx="-2" title="Mover mensaje (¡PULSÓ!/REBOTE) a la izquierda">←</button><button type="button" class="btn nudge-btn" data-nudge="msg" data-dy="-2" title="Mover mensaje arriba">↑</button><button type="button" class="btn nudge-btn" data-nudge="msg" data-dy="2" title="Mover mensaje abajo">↓</button><button type="button" class="btn nudge-btn" data-nudge="msg" data-dx="2" title="Mover mensaje a la derecha">→</button></span></div>
+          <div class="row nrow"><span class="nlab">Tamaño contador:</span><input type="range" id="ctl-timer-size" min="40" max="300" value="160"><span class="nudge"><button type="button" class="btn nudge-btn" data-nudge="timer" data-dx="-2" title="Mover contador a la izquierda">←</button><button type="button" class="btn nudge-btn" data-nudge="timer" data-dy="-2" title="Mover contador arriba">↑</button><button type="button" class="btn nudge-btn" data-nudge="timer" data-dy="2" title="Mover contador abajo">↓</button><button type="button" class="btn nudge-btn" data-nudge="timer" data-dx="2" title="Mover contador a la derecha">→</button></span></div>
+          <div class="row nrow"><span class="nlab">Tamaño reloj:</span><input type="range" id="ctl-clock-size" min="10" max="70" value="26"><span class="nudge"><button type="button" class="btn nudge-btn" data-nudge="clock" data-dx="-2" title="Mover reloj a la izquierda">←</button><button type="button" class="btn nudge-btn" data-nudge="clock" data-dy="-2" title="Mover reloj arriba">↑</button><button type="button" class="btn nudge-btn" data-nudge="clock" data-dy="2" title="Mover reloj abajo">↓</button><button type="button" class="btn nudge-btn" data-nudge="clock" data-dx="2" title="Mover reloj a la derecha">→</button></span></div>
+          <label class="row"><textarea id="layout-io" rows="6" placeholder="JSON de layout (exportar/importar)"></textarea></label>
+          <button id="btn-layout-export" class="btn">Exportar JSON</button>
+          <button id="btn-layout-import" class="btn">Importar JSON</button>
+        </div>
+      </div>
+
+      <div class="panel">
+        <h2>Redes WiFi</h2>
+        <p class="hint">3 redes en orden de preferencia. Deja SSID y contraseña en blanco si no quieres usar esa posición.</p>
+        <div id="wifi-config"></div>
+        <div class="row">
+          <button id="btn-wifi-save" class="btn btn-primary">Guardar y aplicar</button>
+          <span id="wifi-msg" class="hint"></span>
+        </div>
+        <p id="wifi-actual" class="hint"></p>
+        <div class="row">
+          <select id="wifi-connect-select"></select>
+          <button id="btn-wifi-connect" class="btn">Conectar ahora</button>
+        </div>
+        <div class="row">
+          <input type="text" id="wifi-connect-ssid" placeholder="Otro SSID">
+          <input type="password" id="wifi-connect-psk" placeholder="Contraseña">
+          <button id="btn-wifi-connect2" class="btn">Conectar</button>
+        </div>
+      </div>
+
+      <div class="panel">
+        <h2>Sonidos</h2>
+        <p class="hint">Elige un sonido del desplegable y sube tu MP3 para usarlo en vez del de sistema. <b>Máximo 1 MB</b> por archivo (los mayores se bloquean).</p>
+        <div class="row">
+          <select id="snd-slot"></select>
+          <input type="file" id="snd-file" accept="audio/mpeg,audio/mp3">
+          <button id="btn-snd-upload" class="btn">Subir MP3</button>
+        </div>
+        <div id="snd-slot-info" class="hint"></div>
+        <div class="row">
+          <button id="btn-snd-del-one" class="btn">Borrar MP3 seleccionado</button>
+          <button id="btn-snd-del" class="btn btn-danger">Borrar todos los MP3</button>
+        </div>
+        <div id="snd-msg" class="hint"></div>
+      </div>
+
+      <div class="panel">
+        <h2>Animaciones — textos e imágenes</h2>
+        <p class="hint">Texto del proyector (✎) e imagen del personaje por animación. Sube un <b>GIF animado</b> (se muestra tal cual) o un <b>PNG</b> (con el movimiento de la animación). Sin subida o al quitarla, vuelve el de serie.</p>
+        <p class="hint">Límites de imagen: <b>máx 1 MB</b> y <b>800×800 px</b> (se muestra a 620 px de alto).</p>
+        <div class="row q-addrow">
+          <input type="text" id="tag-edit" maxlength="90" placeholder="Texto de la animación seleccionada...">
+          <button id="btn-tag-save" class="btn" disabled>Guardar cambios</button>
+          <button id="btn-tag-cancel" class="btn hidden">Cancelar</button>
+        </div>
+        <div class="row">
+          <button id="btn-tag-reset" class="btn">Restaurar textos originales</button>
+          <span id="tag-msg" class="hint"></span>
+        </div>
+        <div id="tag-list"></div>
+      </div>
+
+      <div class="panel">
+        <h2>Sesión</h2>
+        <button id="btn-logout" class="btn">Cerrar sesión</button>
+      </div>
+    </div>
+  </section>
+</main>
+
+<script src="js/app.js?v=20260905j"></script>
+<script src="js/editor.js?v=20260905j"></script>
+</body>
+</html>

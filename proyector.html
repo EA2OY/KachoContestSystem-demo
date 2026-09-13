@@ -1,0 +1,52 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Date el Bit — Pantalla</title>
+<link rel="stylesheet" href="css/style.css?v=20260905j">
+</head>
+<body class="proyector">
+
+<header class="topbar">
+  <div class="tabs wd-left">
+    <span id="wd-chip" class="chip chip-bad">SIN SEÑAL</span>
+    <button id="btn-preload" class="btn chip-toggle" title="Descarga al navegador los MP3, GIFs e imágenes antes de jugar: así el primer uso no pide nada al ESP32 a mitad de ronda (sin cortes ni latencia)">Precargar</button>
+  </div>
+  <div class="status">
+    <span id="conn-status" class="chip chip-dim">DEMO</span>
+    <span id="version-tag" class="chip chip-dim">Kacho-Contest-System v1.0</span>
+    <span id="phase-chip" class="chip">ESPERANDO</span>
+  </div>
+</header>
+
+<main>
+  <section id="tab-proyeccion" class="tabpage active">
+    <div id="scale-wrap">
+      <div id="stage">
+        <img id="bg" src="img/fondoweb.jpg" alt="" draggable="false" loading="lazy">
+        <div id="players"></div>
+        <div id="hud">
+          <div id="pixel-title">Date El Bit 2026</div>
+          <div id="clock">--:--:--</div>
+          <div id="question"></div>
+          <div id="state-msg"></div>
+          <div id="timer"></div>
+        </div>
+        <div id="blackout"></div>
+        <div id="anim-overlay">
+          <div class="anim-box">
+            <img id="anim-napi" src="" alt="">
+            <div class="anim-tag">¡REARME!</div>
+          </div>
+        </div>
+        <div id="expl-overlay"><div id="expl-text"></div></div>
+        <div id="audio-unlock"><div class="au-box">🔊 Toca la pantalla para activar el sonido</div></div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<script src="js/app.js?v=20260905j"></script>
+</body>
+</html>
